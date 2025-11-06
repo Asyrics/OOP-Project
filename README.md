@@ -1,6 +1,6 @@
 <body>
   <div>
-  <h2 style="font-size = 20px">
+  <h2 style="font-size:20px">
     1. o interfață sau o clasă abstractă care să conțină 2 metode care vor fi implementate în clase. O clasă părinte din care să fie derivate următoarele două clase.
   </h2>
   <h2>
