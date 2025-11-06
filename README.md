@@ -5,4 +5,4 @@
 🔴 5. Interfață grafică utilizator  
 🔴 6. Două fișiere în care sunt memorați cei doi vectori
 
-🔴 - not finished  🟢 - finished
+🔴 - not finished 🟡 - in progress  🟢 - finished
