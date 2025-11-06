@@ -1,7 +1,9 @@
 <body>
   <div>
+  <h2>
   1. o interfață sau o clasă abstractă care să conțină 2 metode care vor fi implementate în clase. O
   clasă părinte din care să fie derivate următoarele două clase.
+  </h2>
   2. două clase în relație de moștenire cu câmpuri private (minim 10 câmpuri însumate la cele două
   clase), constructor fără argumente, constructor cu toate argumentele, constructor de copiere,
   metodă de afișare a caracteristicilor claselor (toString), metode publice de setare (set) și obținere
