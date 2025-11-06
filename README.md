@@ -1,6 +1,4 @@
-<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-
--------------------- JAVA PROJECT<i class="devicon-java-plain"></i>--------------------
+-------------------- JAVA PROJECT<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="40" height="40" alt="Java" /></i>--------------------
 
 🔴 1. O interfață sau o clasă abstractă care să conțină 2 metode  
 🔴 2. Două clase în relație de moștenire  
