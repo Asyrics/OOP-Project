@@ -1,3 +1,7 @@
+<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+-------------------- JAVA PROJECT <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" /> --------------------
+
 🔴 1. O interfață sau o clasă abstractă care să conțină 2 metode  
 🔴 2. Două clase în relație de moștenire  
 🔴 3. Câte un vector cu 10 elemente  
