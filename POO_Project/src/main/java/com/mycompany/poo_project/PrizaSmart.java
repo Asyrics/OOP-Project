@@ -18,10 +18,7 @@ public class PrizaSmart extends Gadgets{
     public PrizaSmart(){};
     
     public PrizaSmart(String nume,String cul,boolean soft,String Brand,int numarp,int amp,int tensiune,String tipProt,String tipPriza){
-        super.numeProdus = nume;
-        super.culoare = cul;
-        super.software = soft;
-        super.brand = Brand;
+        super(nume,cul,soft,Brand);
         this.numarPrize = numarp;
         this.tipProtectie = tipProt;
         this.amperaj = amp;
@@ -79,6 +76,7 @@ public class PrizaSmart extends Gadgets{
     
     //toString
     
+    @Override
     public String toString(){
         return "Priza Smart: " + super.numeProdus + " Numar Prize: " + this.numarPrize + " Protectie: " + this.tipProtectie + " Amperaj: " + this.amperaj + " Tensiune alimentare: " + this.tensiune_alim + " Tip Priza: " + this.tipPriza;
                 

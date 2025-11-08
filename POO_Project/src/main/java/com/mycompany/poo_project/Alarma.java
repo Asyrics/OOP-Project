@@ -19,10 +19,7 @@ public class Alarma extends Gadgets{
     public Alarma(){};
     
     public Alarma(String nume,String cul,boolean soft,String Brand,String tipd,String tipa,String tipm,int greutate,String dim){
-        super.numeProdus = nume;
-        super.culoare = cul;
-        super.software = soft;
-        super.brand = Brand;
+        super(nume,cul,soft,Brand);
         this.tipConexiune = tipa;
         this.tipDetector = tipd;
         this.tipMontaj = tipm;
@@ -80,6 +77,7 @@ public class Alarma extends Gadgets{
     
     //toString
     
+    @Override
     public String toString(){
         return "Alarma: " + super.numeProdus + " Detector: " + this.tipDetector + " Conexiune: " + this.tipConexiune + " Montaj: " + this.tipMontaj + " Greutate: " + this.greutate + " Dim: " + this.Dimensiuni;
                 

@@ -49,4 +49,8 @@ public abstract class Gadgets {
     public abstract int getPret();
     public abstract boolean esteSmart();
     
+    public String toString(){
+        return "Nume: " + this.numeProdus + " Culoare: " + this.culoare + " Softare: " + this.software + " Brand: " + this.brand;
+    }
+    
 }
