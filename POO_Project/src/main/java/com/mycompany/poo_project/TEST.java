@@ -17,5 +17,10 @@ public class TEST {
     private int nuuu6uuget = 0;
     private int nuuu2get = 0;
     
+<<<<<<< HEAD
     String pulonezi = "Pilonezu e pulonez";
+=======
+    private String nug1 = "NIG";
+    private String nug2 = "NIGGER";
+>>>>>>> d50547f6d846cbed4a3b2c2689995e396f609bcb
 }
