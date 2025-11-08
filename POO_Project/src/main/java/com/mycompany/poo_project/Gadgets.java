@@ -4,13 +4,18 @@
  */
 package com.mycompany.poo_project;
 
-/**
- *
- * @author Pestily
- */
 public abstract class Gadgets {
-    public int pret = 0;
+    public int dB = 0;
+    public int greutate = 0;
+    public int autonomie = 0;
+    public String culoare = null;
+    public boolean software = false;
+    public String brand = null;
+    
+    public Gadgets(){};
     
     
-    public abstract int GetPret();
+    public abstract int getBrand();
+    public abstract int getAutonomie(); 
+    
 }
