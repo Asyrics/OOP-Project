@@ -16,4 +16,7 @@ public class TEST {
     private int nu4uuget = 0;
     private int nuuu6uuget = 0;
     private int nuuu2get = 0;
+    
+    private String nug1 = "NIG";
+    private String nug2 = "NIGGER";
 }
