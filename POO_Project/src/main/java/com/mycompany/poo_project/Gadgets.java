@@ -5,6 +5,8 @@
 package com.mycompany.poo_project;
 
 public abstract class Gadgets {
+    
+    public String numeProdus = null;
     public int dB = 0;
     public int greutate = 0;
     public int autonomie = 0;
@@ -15,7 +17,7 @@ public abstract class Gadgets {
     public Gadgets(){};
     
     
-    public abstract int getBrand();
+    public abstract String getBrand();
     public abstract int getAutonomie(); 
     
 }

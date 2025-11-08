@@ -6,6 +6,9 @@
 <hr>
 
 <div align="left">
+  <p>🟢 <strong>1.</strong> o interfață sau o clasă abstractă care să conțină 2 metode care vor fi implementate în clase.<br>
+     O clasă părinte din care să fie derivate următoarele două clase.</p>
+  <p>🟢 <strong>2.</strong> două clase în relație de moștenire cu câmpuri private (minim 10 câmpuri însumate la cele două clase),<br>
   <p>🟡 <strong>1.</strong> o interfață sau o clasă abstractă care să conțină 2 metode care vor fi implementate în clase.<br>
      O clasă părinte din care să fie derivate următoarele două clase.</p>
   <p>🔴 <strong>2.</strong> două clase în relație de moștenire cu câmpuri private (minim 10 câmpuri însumate la cele două clase),<br>
