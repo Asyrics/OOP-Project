@@ -15,7 +15,7 @@ public abstract class Gadgets {
     public Gadgets(){};
     
     
-    public abstract int getBrand();
+    public abstract String getBrand();
     public abstract int getAutonomie(); 
     
 }

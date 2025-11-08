@@ -13,7 +13,11 @@ public class Alarma extends Gadgets{
     
     
     @Override
-    public int GetPret(){
+    public int getAutonomie(){
         return 0;
+    }        
+    @Override
+    public String getBrand(){
+        return null;
     }
 }
