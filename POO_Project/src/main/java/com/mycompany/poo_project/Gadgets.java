@@ -52,5 +52,4 @@ public abstract class Gadgets {
     public String toString(){
         return "Nume: " + this.numeProdus + " Culoare: " + this.culoare + " Softare: " + this.software + " Brand: " + this.brand;
     }
-    
 }
