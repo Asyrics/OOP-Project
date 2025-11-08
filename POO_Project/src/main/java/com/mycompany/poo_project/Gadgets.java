@@ -46,11 +46,10 @@ public abstract class Gadgets {
         this.brand = brand; 
     }
     
-    public String toString(){
-        return "Nume: " + this.numeProdus + " Culoare: " + this.culoare + " Softare: " + this.software + " Brand: " + this.brand;
-    }
-    
     public abstract int getPret();
     public abstract boolean esteSmart();
     
+    public String toString(){
+        return "Nume: " + this.numeProdus + " Culoare: " + this.culoare + " Softare: " + this.software + " Brand: " + this.brand;
+    }
 }
