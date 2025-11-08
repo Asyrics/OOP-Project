@@ -11,6 +11,7 @@ public abstract class Gadgets {
     public String culoare = null;
     public boolean software = false;
     public String brand = null;
+    public int test =0;
     
     public Gadgets(){};
     
