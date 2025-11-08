@@ -16,4 +16,6 @@ public class TEST {
     private int nu4uuget = 0;
     private int nuuu6uuget = 0;
     private int nuuu2get = 0;
+    
+    String pulonezi = "Pilonezu e pulonez";
 }
