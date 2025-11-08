@@ -17,15 +17,23 @@ public class PrizaSmart extends Gadgets{
     
     public PrizaSmart(){};
     
-    public PrizaSmart(int numarp,int amp,int tensiune,String tipP,String tipPriza){
+    public PrizaSmart(String nume,String cul,boolean soft,String Brand,int numarp,int amp,int tensiune,String tipProt,String tipPriza){
+        super.numeProdus = nume;
+        super.culoare = cul;
+        super.software = soft;
+        super.brand = Brand;
         this.numarPrize = numarp;
-        this.tipProtectie = tipP;
+        this.tipProtectie = tipProt;
         this.amperaj = amp;
         this.tensiune_alim = tensiune;
         this.tipPriza = tipPriza;
     };
     
     public PrizaSmart(PrizaSmart a1){
+        super.numeProdus = a1.numeProdus;
+        super.culoare = a1.culoare;
+        super.brand = a1.brand;
+        super.software = a1.software;
         this.numarPrize = a1.numarPrize;
         this.tipProtectie = a1.tipProtectie;
         this.amperaj = a1.amperaj;
@@ -79,12 +87,12 @@ public class PrizaSmart extends Gadgets{
     //Suprascrierea metodelor din clasa abstracta
     
     @Override
-    public int getAutonomie(){
+    public int getPret(){
         return 0;
     }    
     
     @Override
-    public String getBrand(){
-        return null;
+    public boolean esteSmart(){
+        return false;
     }
 }
