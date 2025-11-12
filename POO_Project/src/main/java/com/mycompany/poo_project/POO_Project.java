@@ -51,14 +51,14 @@ public class POO_Project {
    
         for(int i = 0 ; i <10 ; i++)
         {
-            Ochelari_VR vr1 = new Ochelari_VR("Quest 3", "Alb", "Meta",true,"1920x1080p",90,120,"Titanium","Uifi");
+            Ochelari_VR vr1 = new Ochelari_VR("Quest 3", "Alb", "Meta",1999,true,"1920x1080p",90,120,"Titanium","Uifi");
             listaOchelari_VR.add(vr1);
         }
     
     
         for(int i = 0 ; i <10 ; i++)
         {
-            Boxe_Portabile bp1 = new Boxe_Portabile("Sony", "Negru","JBL",false,"la apa", 20,3,"310 mm latime","Acumulator");
+            Boxe_Portabile bp1 = new Boxe_Portabile("Sony", "Negru","JBL",1999,false,"la apa", 20,3,"310 mm latime","Acumulator");
             listaBoxe_Portabile.add(bp1);
         }
         

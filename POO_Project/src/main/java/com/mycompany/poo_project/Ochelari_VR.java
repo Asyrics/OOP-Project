@@ -16,6 +16,7 @@ public class Ochelari_VR extends Gadgets
     private int fov = 0;
     private String material = null;
     private String tip_conexiune = null;
+    private int pret = 0;
     
     //constructor
     
@@ -25,10 +26,11 @@ public class Ochelari_VR extends Gadgets
         fov = 0;
         material = null;
         tip_conexiune = null;
+        pret = 0;
     }
     
     //constructor cu parametrii
-    public Ochelari_VR(String nume, String culoare, String brand, boolean software,String rezolutie, 
+    public Ochelari_VR(String nume, String culoare, String brand,int pret, boolean software,String rezolutie, 
             int rata_refresh, int fov, String material,String tip_conexiune)
     {
         super.numeProdus = nume;
@@ -40,6 +42,7 @@ public class Ochelari_VR extends Gadgets
         this.fov = fov;
         this.material = material;
         this.tip_conexiune = tip_conexiune;
+        this.pret = pret;
     }
     
     //constructor de copiere
@@ -54,6 +57,7 @@ public class Ochelari_VR extends Gadgets
         this.fov = a1.fov;
         this.material = a1.material;
         this.tip_conexiune = a1.tip_conexiune;
+        this.pret = a1.pret;
     }
     
     //setteri
@@ -81,6 +85,11 @@ public class Ochelari_VR extends Gadgets
     public void setTipConexiune(String conexiune)
     {
         this.tip_conexiune = conexiune;
+    }
+    
+    public void setPret(int pre)
+    {
+        this.pret = pre;
     }
     
     //getteri
@@ -114,13 +123,13 @@ public class Ochelari_VR extends Gadgets
     @Override
     public int getPret() 
     {
-     return 0;
+     return this.pret;
     }
     
     @Override 
     public boolean esteSmart() 
     {
-     return false;
+     return super.software;
     }
     
     @Override

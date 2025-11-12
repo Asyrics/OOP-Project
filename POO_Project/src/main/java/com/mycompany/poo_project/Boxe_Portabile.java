@@ -18,6 +18,7 @@ public class Boxe_Portabile extends Gadgets
     private double greutate = 0.0;
     private String dimensiuni = null;
     private String tip_alimentare = null;
+    private int pret = 0;
     
     //constructor
     
@@ -27,10 +28,11 @@ public class Boxe_Portabile extends Gadgets
         greutate = 0.0;
         dimensiuni = null;
         tip_alimentare = null;
+        pret = 0;
     }
     
     //constructor cu parametrii
-    public Boxe_Portabile(String nume, String culoare, String brand, boolean software,String rezistenta, 
+    public Boxe_Portabile(String nume, String culoare, String brand,int pret, boolean software,String rezistenta, 
             int autonomie, double greutate, String dimensiuni,String tip_alimentare)
     {
         super.numeProdus = nume;
@@ -42,6 +44,7 @@ public class Boxe_Portabile extends Gadgets
         this.greutate = greutate;
         this.dimensiuni = dimensiuni;
         this.tip_alimentare= tip_alimentare;
+        this.pret = pret;
     }
     
     //constructor de copiere
@@ -56,6 +59,7 @@ public class Boxe_Portabile extends Gadgets
         this.greutate = a1.greutate;
         this.dimensiuni = a1.dimensiuni;
         this.tip_alimentare = a1.tip_alimentare;
+        this.pret = a1.pret;
     }
     
     //setteri
@@ -83,6 +87,11 @@ public class Boxe_Portabile extends Gadgets
     public void setTipAlimentare(String alimentare)
     {
         this.tip_alimentare = alimentare;
+    }
+    
+    public void setPret(int pre)
+    {
+        this.pret = pre;
     }
     
     //getteri
@@ -116,13 +125,13 @@ public class Boxe_Portabile extends Gadgets
    @Override
     public int getPret() 
     {
-     return 0;
+     return this.pret;
     }
     
     @Override 
     public boolean esteSmart() 
     {
-     return false;
+     return super.software;
     }
     
     @Override
