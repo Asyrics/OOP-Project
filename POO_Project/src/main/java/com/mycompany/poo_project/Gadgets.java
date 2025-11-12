@@ -5,17 +5,52 @@
 package com.mycompany.poo_project;
 
 public abstract class Gadgets {
-    public int dB = 0;
-    public int greutate = 0;
-    public int autonomie = 0;
-    public String culoare = null;
-    public boolean software = false;
-    public String brand = null;
+    
+    protected String numeProdus = null;
+    protected String culoare = null;
+    protected boolean software = false;
+    protected String brand = null;
     
     public Gadgets(){};
+    public Gadgets(String nume,String cul,boolean soft,String Brand){
+        this.numeProdus = nume;
+        this.culoare = cul;
+        this.software = soft;
+        this.brand = Brand;
+    };
     
+    public String getNumeProdus(){ 
+        return this.numeProdus; 
+    }
+    public String getCuloare(){ 
+        return this.culoare; 
+    }
+    public boolean areSoftware(){
+        return this.software; 
+    }
+    public String getBrand(){
+        return this.brand;
+    }
+    public void setCuloare(String culoare){ 
+        this.culoare = culoare; 
+    }
+    public void setNumeProdus(String numeProdus){ 
+        this.numeProdus = numeProdus; 
+    }
+    public void setSoftware(boolean software){ 
+        this.software = software; 
+    }
+
+    public void setBrand(String brand)
+    { 
+        this.brand = brand; 
+    }
     
-    public abstract int getBrand();
-    public abstract int getAutonomie(); 
+    public abstract int getPret();
+    public abstract boolean esteSmart();
+    
+    public String toString(){
+        return "Nume: " + this.numeProdus + " Culoare: " + this.culoare + " Softare: " + this.software + " Brand: " + this.brand;
+    }
     
 }
