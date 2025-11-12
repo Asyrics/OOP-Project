@@ -40,12 +40,12 @@ public class POO_Project {
       ArrayList<Gadgets> listaCasti=new ArrayList<>();
       
       for(int a=0; a<10; a++){
-          Boxe box=new Boxe("casti","roz", "ciocolata", 164, true,"skullcandy", 13.65, 4, "inghetata");
+          Boxe box=new Boxe("casti","roz", "ciocolata", 164, true,"skullcandy", 13.65, 4, "inghetata", 100);
           listaBoxe.add(box);
       }
       
        for(int a=0; a<10; a++){
-          Casti cas=new Casti("casti","mov", "pistrui", 234, false,"cascuta", 45.21, 2, "iarna");
+          Casti cas=new Casti("casti","mov", "pistrui", 234, false,"cascuta", 45.21, 2, "iarna", 79);
           listaCasti.add(cas);
       }
         

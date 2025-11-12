@@ -25,9 +25,6 @@ public abstract class Gadgets {
     public String getCuloare(){ 
         return this.culoare; 
     }
-    public boolean areSoftware(){
-        return this.software; 
-    }
     public String getBrand(){
         return this.brand;
     }
@@ -37,8 +34,8 @@ public abstract class Gadgets {
     public void setNumeProdus(String numeProdus){ 
         this.numeProdus = numeProdus; 
     }
-    public void setSoftware(boolean software){ 
-        this.software = software; 
+    public void setSoftware(boolean smart){ 
+        this.software = smart; 
     }
 
     public void setBrand(String brand)
@@ -52,5 +49,4 @@ public abstract class Gadgets {
     public String toString(){
         return "Nume: " + this.numeProdus + " Culoare: " + this.culoare + " Softare: " + this.software + " Brand: " + this.brand;
     }
-    
 }

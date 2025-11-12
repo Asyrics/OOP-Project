@@ -14,6 +14,7 @@ public class Boxe extends Gadgets {
     private double greutate=0.0;
     private int nrBoxe=0;
     private String functii=null;
+    private int pret=0;
     
     public Boxe(){
         tipAmplificare=null;
@@ -21,10 +22,11 @@ public class Boxe extends Gadgets {
         greutate=0;
         nrBoxe=0;
         functii=null;
+        pret=0;
     }
     
    
-    public Boxe(String nume, String cul,String tip, int rms, boolean soft,String Brand, double greu, int boxe, String fctii){
+    public Boxe(String nume, String cul,String tip, int rms, boolean soft,String Brand, double greu, int boxe, String fctii, int pr){
         super.numeProdus = nume;
         super.culoare = cul;
         super.software = soft;
@@ -34,6 +36,7 @@ public class Boxe extends Gadgets {
         this.greutate=greu;
         this.nrBoxe=boxe;
         this.functii=fctii;
+        this.pret=pr;
     }
     
     public Boxe(Boxe a){
@@ -46,6 +49,7 @@ public class Boxe extends Gadgets {
         this.greutate=a.greutate;
         this.nrBoxe=a.nrBoxe;
         this.functii=a.functii;
+        this.pret=a.pret;
     }
     
     //setteri
@@ -69,6 +73,10 @@ public class Boxe extends Gadgets {
         this.functii=functii;
     }
     
+    public void setPret(int pret){
+        this.pret=pret;
+    }
+    
     //getteri
     public String getTipAmplificare(){
         return tipAmplificare;
@@ -90,20 +98,21 @@ public class Boxe extends Gadgets {
         return functii;
     }
     
-    
+   
+
      //override
     @Override
     public int getPret(){
-        return 0;
+        return this.pret;
     }
     
     @Override
     public boolean esteSmart(){
-        return false;
+        return super.software;
     }
     
     @Override
     public String toString(){
-        return super.toString()+" "+tipAmplificare+" "+rmsPutere+" "+greutate+" "+nrBoxe+" "+functii;
+        return super.toString()+" "+tipAmplificare+" "+rmsPutere+" "+greutate+" "+nrBoxe+" "+functii+" "+pret;
     }
 }

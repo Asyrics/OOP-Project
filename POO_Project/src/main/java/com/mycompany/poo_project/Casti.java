@@ -14,6 +14,7 @@ public class Casti extends Gadgets {
     private String functii=null;
     private int razaMax=0;
     private int diametruDifuzor=0;
+    private int pret=0;
     
     public Casti(){
         tipCasti=null;
@@ -21,9 +22,10 @@ public class Casti extends Gadgets {
         functii=null;
         razaMax=0;
         diametruDifuzor=0;
+        pret=0;
     }
     
-  public Casti(String nume, String cul,String tip, int raza, boolean soft,String Brand, double timp, int diametru, String fctii){
+  public Casti(String nume, String cul,String tip, int raza, boolean soft,String Brand, double timp, int diametru, String fctii, int pr){
         super.numeProdus = nume;
         super.culoare = cul;
         super.software = soft;
@@ -33,6 +35,7 @@ public class Casti extends Gadgets {
         this.razaMax=raza;
         this.tipCasti=tip;
         this.diametruDifuzor=diametru;
+        this.pret=pr;
     }
     
     public Casti(Casti a){
@@ -45,6 +48,7 @@ public class Casti extends Gadgets {
         this.razaMax=a.razaMax;
         this.tipCasti=a.tipCasti;
         this.diametruDifuzor=a.diametruDifuzor;
+        this.pret=a.pret;
     }
     
     //setteri
@@ -66,6 +70,10 @@ public class Casti extends Gadgets {
     
     public void setDiametruDifuzor(int diametruDifuzor){
         this.diametruDifuzor=diametruDifuzor;
+    }
+    
+    public void setPret(int pret){
+        this.pret=pret;
     }
     
     //getteri
@@ -102,6 +110,6 @@ public class Casti extends Gadgets {
     
     @Override
     public String toString(){
-        return super.toString()+" "+timpIncarcare+" "+functii+" "+razaMax+" "+tipCasti+" "+diametruDifuzor;
+        return super.toString()+" "+timpIncarcare+" "+functii+" "+razaMax+" "+tipCasti+" "+diametruDifuzor+" "+pret;
     }
 }
