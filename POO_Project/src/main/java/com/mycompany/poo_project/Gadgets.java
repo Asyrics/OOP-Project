@@ -18,6 +18,12 @@ public abstract class Gadgets {
         this.software = soft;
         this.brand = Brand;
     };
+    public Gadgets(Gadgets a1){
+        this.brand = a1.brand;
+        this.culoare = a1.culoare;
+        this.numeProdus = a1.numeProdus;
+        this.software = a1.software;
+    }
     
     public String getNumeProdus(){ 
         return this.numeProdus; 

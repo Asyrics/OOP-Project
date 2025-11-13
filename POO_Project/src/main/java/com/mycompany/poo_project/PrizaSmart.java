@@ -27,10 +27,7 @@ public class PrizaSmart extends Gadgets{
     };
     
     public PrizaSmart(PrizaSmart a1){
-        super.numeProdus = a1.numeProdus;
-        super.culoare = a1.culoare;
-        super.brand = a1.brand;
-        super.software = a1.software;
+        super(a1);
         this.numarPrize = a1.numarPrize;
         this.tipProtectie = a1.tipProtectie;
         this.amperaj = a1.amperaj;

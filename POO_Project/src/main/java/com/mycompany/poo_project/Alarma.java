@@ -28,10 +28,7 @@ public class Alarma extends Gadgets{
     };
     
     public Alarma(Alarma a1){
-        super.numeProdus = a1.numeProdus;
-        super.culoare = a1.culoare;
-        super.brand = a1.brand;
-        super.software = a1.software;
+        super(a1);
         this.tipConexiune = a1.tipConexiune;
         this.tipDetector = a1.tipDetector;
         this.tipMontaj = a1.tipMontaj;

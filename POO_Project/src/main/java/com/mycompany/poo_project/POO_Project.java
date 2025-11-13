@@ -11,7 +11,7 @@ import java.util.ArrayList;
  */
     
 public class POO_Project {
-    
+    //functii statice pt a putea fi folosit in clasa
     public static void afisareVectorAlarme(ArrayList<Gadgets> lista, String tipd, String Brand) {
             System.out.println("Alarme ce au detectia " + tipd + " si sunt de la brandul " + Brand);
             for(Gadgets a : lista){
