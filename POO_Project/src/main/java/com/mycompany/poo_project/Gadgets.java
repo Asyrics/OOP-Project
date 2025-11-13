@@ -4,6 +4,7 @@
  */
 package com.mycompany.poo_project;
 
+//clasa abstracta
 public abstract class Gadgets {
     
     protected String numeProdus = null;
@@ -18,6 +19,13 @@ public abstract class Gadgets {
         this.software = soft;
         this.brand = Brand;
     };
+    
+    public Gadgets(Gadgets g){
+        this.numeProdus = g.numeProdus;
+        this.culoare = g.culoare;
+        this.software = g.software;
+        this.brand =g.brand;
+    }
     
     public String getNumeProdus(){ 
         return this.numeProdus; 
@@ -43,6 +51,7 @@ public abstract class Gadgets {
         this.brand = brand; 
     }
     
+    //metodele
     public abstract int getPret();
     public abstract boolean esteSmart();
     

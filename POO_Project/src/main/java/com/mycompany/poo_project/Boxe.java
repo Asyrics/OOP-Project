@@ -8,7 +8,9 @@ package com.mycompany.poo_project;
  *
  * @author anama
  */
+//clasa derivata Boxe
 public class Boxe extends Gadgets {
+    //campurile private
     private String tipAmplificare=null;
     private int rmsPutere=0;
     private double greutate=0.0;
@@ -16,6 +18,7 @@ public class Boxe extends Gadgets {
     private String functii=null;
     private int pret=0;
     
+    //constructor fara argumente
     public Boxe(){
         tipAmplificare=null;
         rmsPutere=0;
@@ -25,7 +28,7 @@ public class Boxe extends Gadgets {
         pret=0;
     }
     
-   
+   //constructor cu toate argumentele
     public Boxe(String nume, String cul,String tip, int rms, boolean soft,String Brand, double greu, int boxe, String fctii, int pr){
         super.numeProdus = nume;
         super.culoare = cul;
@@ -39,11 +42,9 @@ public class Boxe extends Gadgets {
         this.pret=pr;
     }
     
+    //constructor de copiere
     public Boxe(Boxe a){
-        super.numeProdus = a.numeProdus;
-        super.culoare = a.culoare;
-        super.software = a.software;
-        super.brand = a.brand;
+        super(a);
         this.tipAmplificare=a.tipAmplificare;
         this.rmsPutere=a.rmsPutere;
         this.greutate=a.greutate;
@@ -52,7 +53,7 @@ public class Boxe extends Gadgets {
         this.pret=a.pret;
     }
     
-    //setteri
+    //setteri (metode publice de setare)
     public void setTipAmplificare(String tipAmplificare){
         this.tipAmplificare=tipAmplificare;
     }
@@ -77,7 +78,7 @@ public class Boxe extends Gadgets {
         this.pret=pret;
     }
     
-    //getteri
+    //getteri (metode de obtinere a valorilor campurilor)
     public String getTipAmplificare(){
         return tipAmplificare;
     }
@@ -111,6 +112,7 @@ public class Boxe extends Gadgets {
         return super.software;
     }
     
+    //metoda de afisare a caracteristicilor claselor (toString)
     @Override
     public String toString(){
         return super.toString()+" "+tipAmplificare+" "+rmsPutere+" "+greutate+" "+nrBoxe+" "+functii+" "+pret;

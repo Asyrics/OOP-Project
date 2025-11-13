@@ -11,7 +11,8 @@ import java.util.ArrayList;
  */
 public class POO_Project {
 
-    public static void vectorBoxe(ArrayList<Gadgets> lista, String functii, double greutate){
+    //metoda pt Boxe 
+    public static void afisareVectorBoxe(ArrayList<Gadgets> lista, String functii, double greutate){
     for(Gadgets bx : lista){
         if(bx instanceof Boxe){
         Boxe b1= (Boxe) bx;
@@ -23,7 +24,8 @@ public class POO_Project {
     }    
     }
     
-        public static void vectorCasti(ArrayList<Gadgets> lista, String tipCasti, int razaMax){
+    //metoda pt Casti    
+    public static void afisareaVectorCasti(ArrayList<Gadgets> lista, String tipCasti, int razaMax){
     for(Gadgets cs : lista){
         if(cs instanceof Casti){
         Casti c1= (Casti) cs;
@@ -36,6 +38,7 @@ public class POO_Project {
     }
     
     public static void main(String[] args) {
+        //se creeaza listele
       ArrayList<Gadgets> listaBoxe= new ArrayList<>();
       ArrayList<Gadgets> listaCasti=new ArrayList<>();
       
@@ -45,11 +48,11 @@ public class POO_Project {
       }
       
        for(int a=0; a<10; a++){
-          Casti cas=new Casti("casti","mov", "pistrui", 234, false,"cascuta", 45.21, 2, "iarna", 79);
+          Casti cas=new Casti("casti","mov", "pistrui", 234, false,"cascuta", 45.21, 2, "iarna",79);
           listaCasti.add(cas);
       }
         
-       vectorBoxe(listaBoxe,"inghetata", 13.65 );
+       afisareVectorBoxe(listaBoxe,"inghetata", 13.65 );
        
     }
 }

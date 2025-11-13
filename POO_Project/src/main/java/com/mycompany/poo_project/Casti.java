@@ -8,7 +8,9 @@ package com.mycompany.poo_project;
  *
  * @author anama
  */
+//clasa derivata Casti
 public class Casti extends Gadgets {
+    //campurile private
     private String tipCasti=null;
     private double timpIncarcare=0.0;
     private String functii=null;
@@ -16,6 +18,7 @@ public class Casti extends Gadgets {
     private int diametruDifuzor=0;
     private int pret=0;
     
+    //constructor fara argumente
     public Casti(){
         tipCasti=null;
         timpIncarcare=0.0;
@@ -25,7 +28,8 @@ public class Casti extends Gadgets {
         pret=0;
     }
     
-  public Casti(String nume, String cul,String tip, int raza, boolean soft,String Brand, double timp, int diametru, String fctii, int pr){
+    //constructor cu toate argumentele
+    public Casti(String nume, String cul,String tip, int raza, boolean soft,String Brand, double timp, int diametru, String fctii, int pr){
         super.numeProdus = nume;
         super.culoare = cul;
         super.software = soft;
@@ -38,11 +42,9 @@ public class Casti extends Gadgets {
         this.pret=pr;
     }
     
+   //constructor de copiere
     public Casti(Casti a){
-        super.numeProdus = a.numeProdus;
-        super.culoare = a.culoare;
-        super.software = a.software;
-        super.brand = a.brand;
+        super(a);
         this.timpIncarcare=a.timpIncarcare;
         this.functii=a.functii;
         this.razaMax=a.razaMax;
@@ -51,7 +53,7 @@ public class Casti extends Gadgets {
         this.pret=a.pret;
     }
     
-    //setteri
+    //setteri (metode publice de setare)
     public void setTimpIncarcare(double timpIncarcare){
         this.timpIncarcare=timpIncarcare;
     }
@@ -76,7 +78,7 @@ public class Casti extends Gadgets {
         this.pret=pret;
     }
     
-    //getteri
+    //getteri (metode de obtinere a valorilor campurilor)
     public double getTimpIncarcare(){
         return timpIncarcare;
     }
@@ -108,6 +110,7 @@ public class Casti extends Gadgets {
         return false;
     }
     
+    //metoda de afisare a caracteristicilor claselor (toString)
     @Override
     public String toString(){
         return super.toString()+" "+timpIncarcare+" "+functii+" "+razaMax+" "+tipCasti+" "+diametruDifuzor+" "+pret;
