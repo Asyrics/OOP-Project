@@ -50,10 +50,7 @@ public class Boxe_Portabile extends Gadgets
     //constructor de copiere
     public Boxe_Portabile(Boxe_Portabile a1)
     {
-        super.numeProdus = a1.numeProdus;
-        super.culoare = a1.culoare;
-        super.brand = a1.brand;
-        super.software = a1.software;
+        super(a1);
         this.rezistenta = a1.rezistenta;
         this.autonomie = a1.autonomie;
         this.greutate = a1.greutate;
