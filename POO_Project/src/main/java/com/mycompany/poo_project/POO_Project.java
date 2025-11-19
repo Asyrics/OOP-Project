@@ -43,6 +43,12 @@ public class POO_Project {
             }
         }
     }
+   
+    public static void afisareListaVectori(ArrayList<Gadgets> lista) {
+    for (Gadgets g : lista) {
+        System.out.println(g);
+    }
+}
 
     public static void main(String[] args) {
         
@@ -62,11 +68,15 @@ public class POO_Project {
             listaBoxe_Portabile.add(bp1);
         }
         
-        afisareOchelari_VR(listaOchelari_VR,"1920x1080p",120);
+        afisareOchelari_VR(listaOchelari_VR,"1920x1080pp",120);
         
         
         
-        
+        System.out.println("\nVector Ochelari VR ");
+    afisareListaVectori(listaOchelari_VR);
+
+    System.out.println("\nVector Boxe Portabile ");
+    afisareListaVectori(listaBoxe_Portabile);
         
         
         
