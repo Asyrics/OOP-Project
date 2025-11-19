@@ -48,10 +48,7 @@ public class Ochelari_VR extends Gadgets
     //constructor de copiere
     public Ochelari_VR(Ochelari_VR a1)
     {
-        super.numeProdus = a1.numeProdus;
-        super.culoare = a1.culoare;
-        super.brand = a1.brand;
-        super.software = a1.software;
+        super(a1);
         this.rezolutie = a1.rezolutie;
         this.rata_refresh = a1.rata_refresh;
         this.fov = a1.fov;
