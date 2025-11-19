@@ -54,5 +54,15 @@ public class POO_Project {
         
        afisareVectorBoxe(listaBoxe,"inghetata", 13.65 );
        
+      System.out.println("\nLista Boxe");
+    for (int i = 0; i < listaBoxe.size(); i++) {
+        System.out.println(listaBoxe.get(i));
+    }
+
+    System.out.println("\nLista Casti");
+    for (int i = 0; i < listaCasti.size(); i++) {
+        System.out.println(listaCasti.get(i));
     }
 }
+       
+    }
