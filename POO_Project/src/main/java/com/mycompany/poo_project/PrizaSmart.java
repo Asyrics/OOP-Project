@@ -15,7 +15,8 @@ public class PrizaSmart extends Gadgets{
     private int tensiune_alim = 0;
     private String tipPriza = null;
     
-    public PrizaSmart(){};
+    public PrizaSmart(){
+    };
     
     public PrizaSmart(String nume,String cul,boolean soft,String Brand,int numarp,int amp,int tensiune,String tipProt,String tipPriza){
         super(nume,cul,soft,Brand);
@@ -43,7 +44,7 @@ public class PrizaSmart extends Gadgets{
     public void setTipProt(String tipP){
         this.tipProtectie = tipP;
     }
-    public void setAmperaj(int amp){
+    public void setAmperaj(byte amp){
         this.amperaj = amp;
     }
     public void setTensiune(int tens){

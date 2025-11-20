@@ -35,6 +35,12 @@ public class POO_Project {
             }
     }
     
+    public static void afisareVector(ArrayList<Gadgets> lista){
+        for(Gadgets p : lista){
+            System.out.println(p);
+        }
+    }
+    
 
     public static void main(String[] args) {
             
@@ -54,9 +60,10 @@ public class POO_Project {
             PrizaSmart p = new PrizaSmart("G20","Alb",true,"GAVIO",1,20,240,"Suprasarcina","European");
             listaPrize.add(p);
         }
-        
         afisareVectorAlarme(listaAlarme,"PIR","Dahua");
         afisareVectorPrize(listaPrize,1,"GAVIO");
+        System.out.println("Vector fara filtre");
+        afisareVector(listaAlarme);
     }
     
 }
