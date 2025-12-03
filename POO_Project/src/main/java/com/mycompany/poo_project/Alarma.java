@@ -15,16 +15,18 @@ public class Alarma extends Gadgets{
     private String tipMontaj = null;
     private int greutate = 0;
     private String Dimensiuni = null;
+    private int pret = 0;
     
     public Alarma(){};
     
-    public Alarma(String nume,String cul,boolean soft,String Brand,String tipd,String tipa,String tipm,int greutate,String dim){
+    public Alarma(String nume,String cul,boolean soft,String Brand,String tipd,String tipa,String tipm,int greutate,String dim,int pret){
         super(nume,cul,soft,Brand);
         this.tipConexiune = tipa;
         this.tipDetector = tipd;
         this.tipMontaj = tipm;
         this.greutate = greutate;
         this.Dimensiuni = dim;
+        this.pret = pret;
     };
     
     public Alarma(Alarma a1){
@@ -37,6 +39,7 @@ public class Alarma extends Gadgets{
         this.tipMontaj = a1.tipMontaj;
         this.greutate = a1.greutate;
         this.Dimensiuni = a1.Dimensiuni;
+        this.pret = pret;
     }
     
     //Setteri
@@ -55,6 +58,14 @@ public class Alarma extends Gadgets{
     }
     public void setDim(String dim){
         this.Dimensiuni = dim;
+    }
+    public void setPret(int pret){
+        if(pret > 0){
+            this.pret = pret;
+        }
+        else {
+            System.out.println("Pretul nu poate fi negativ");
+        }
     }
     
     //Getteri
@@ -87,11 +98,11 @@ public class Alarma extends Gadgets{
     
     @Override
     public int getPret(){
-        return 0;
+        return this.pret;
     }    
     
     @Override
     public boolean esteSmart(){
-        return false;
+        return super.software;
     }
 }

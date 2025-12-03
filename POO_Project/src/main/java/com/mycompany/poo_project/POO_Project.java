@@ -43,20 +43,23 @@ public class POO_Project {
         ArrayList<Gadgets> listaPrize = new ArrayList<>();
         
         //Alarma
-        // String nume,String cul,boolean soft,String Brand,String tipd,String tipa,String tipm,int greutate,String dim
+        //String nume,String cul,boolean soft,String Brand,String tipd,String tipa,String tipm,int greutate,String dim
         //Priza
         //String nume,String cul,boolean soft,String Brand,String tipd,String tipa,String tipm,int greutate,String dim
         for(int i = 0 ; i<10 ;i++){
-            Alarma a = new Alarma("ART-ARC3800H-03-W2","Alb",false,"Dahua","PIR","Wireless","Perete",510,"74.8x174.8x38.3");
+            Alarma a = new Alarma("ART-ARC3800H-03-W2","Alb",false,"Dahua","PIR","Wireless","Perete",510,"74.8x174.8x38.3",350);
             listaAlarme.add(a);
         }
         for(int i = 0 ; i<10 ;i++){
-            PrizaSmart p = new PrizaSmart("G20","Alb",true,"GAVIO",1,20,240,"Suprasarcina","European");
+            PrizaSmart p = new PrizaSmart("G20","Alb",true,"GAVIO",1,20,240,"Suprasarcina","European",100);
             listaPrize.add(p);
         }
-        
+        for(Gadgets g : listaAlarme){
+            System.out.println(g);
+        }
         afisareVectorAlarme(listaAlarme,"PIR","Dahua");
         afisareVectorPrize(listaPrize,1,"GAVIO");
+        java.awt.EventQueue.invokeLater(() -> new MainFrame(listaAlarme,listaPrize).setVisible(true));
     }
     
 }

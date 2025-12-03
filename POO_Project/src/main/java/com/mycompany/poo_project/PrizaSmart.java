@@ -14,16 +14,18 @@ public class PrizaSmart extends Gadgets{
     private int amperaj = 0;
     private int tensiune_alim = 0;
     private String tipPriza = null;
+    private int pret = 0;
     
     public PrizaSmart(){};
     
-    public PrizaSmart(String nume,String cul,boolean soft,String Brand,int numarp,int amp,int tensiune,String tipProt,String tipPriza){
+    public PrizaSmart(String nume,String cul,boolean soft,String Brand,int numarp,int amp,int tensiune,String tipProt,String tipPriza,int pret){
         super(nume,cul,soft,Brand);
         this.numarPrize = numarp;
         this.tipProtectie = tipProt;
         this.amperaj = amp;
         this.tensiune_alim = tensiune;
         this.tipPriza = tipPriza;
+        this.pret = pret;
     };
     
     public PrizaSmart(PrizaSmart a1){
@@ -36,6 +38,7 @@ public class PrizaSmart extends Gadgets{
         this.amperaj = a1.amperaj;
         this.tensiune_alim = a1.tensiune_alim;
         this.tipPriza = a1.tipPriza;
+        this.pret = pret;
     }
     
     //Setteri
@@ -54,6 +57,14 @@ public class PrizaSmart extends Gadgets{
     }
     public void setTipPriza(String tipPriza){
         this.tipPriza = tipPriza;
+    }
+    public void setPret(int pret){
+        if(pret > 0){
+            this.pret = pret;
+        }
+        else {
+            System.out.println("Pretul nu poate fi negativ");
+        }
     }
     
     //Getteri
@@ -74,6 +85,7 @@ public class PrizaSmart extends Gadgets{
         return this.tipPriza;
     }
     
+    
     //toString
     
     @Override
@@ -86,11 +98,11 @@ public class PrizaSmart extends Gadgets{
     
     @Override
     public int getPret(){
-        return 0;
+        return this.pret;
     }    
     
     @Override
     public boolean esteSmart(){
-        return false;
+        return super.software;
     }
 }
