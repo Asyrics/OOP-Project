@@ -34,11 +34,19 @@ public class MainFrame extends javax.swing.JFrame {
         initComponents();
         listaAlarma = a1;
         listaPriza = a2;
-        lista.clear();
-        for(Gadgets g : a1){
-            lista.addElement(g);
+        if(jTabbedPane1.getSelectedIndex() == 0){
+            lista.clear();
+            for(Gadgets g : a1){
+                lista.addElement(g);
+            }
+            jList1.setModel(lista);
+        }else if(jTabbedPane1.getSelectedIndex() == 1){
+            lista.clear();
+            for(Gadgets g : a2){
+                lista.addElement(g);
+            }
+            jList1.setModel(lista);
         }
-        jList1.setModel(lista);
         
     }
 
@@ -53,6 +61,8 @@ public class MainFrame extends javax.swing.JFrame {
 
         jFrame1 = new javax.swing.JFrame();
         jFileChooser1 = new javax.swing.JFileChooser();
+        jFrame2 = new javax.swing.JFrame();
+        jOptionPane1 = new javax.swing.JOptionPane();
         jList1 = new javax.swing.JList<>();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
@@ -100,6 +110,30 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jFrame2.setMaximumSize(new java.awt.Dimension(262, 130));
+        jFrame2.setMinimumSize(new java.awt.Dimension(262, 130));
+        jFrame2.setPreferredSize(new java.awt.Dimension(262, 130));
+
+        jOptionPane1.setMessage("Nu exista elemente cu acesti parametri");
+        jOptionPane1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jOptionPane1MousePressed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jFrame2Layout = new javax.swing.GroupLayout(jFrame2.getContentPane());
+        jFrame2.getContentPane().setLayout(jFrame2Layout);
+        jFrame2Layout.setHorizontalGroup(
+            jFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jOptionPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jFrame2Layout.setVerticalGroup(
+            jFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jFrame2Layout.createSequentialGroup()
+                .addComponent(jOptionPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Alarma");
         setMinimumSize(new java.awt.Dimension(730, 350));
@@ -108,6 +142,11 @@ public class MainFrame extends javax.swing.JFrame {
         jList1.setModel(new DefaultListModel());
 
         jTabbedPane1.setToolTipText("");
+        jTabbedPane1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTabbedPane1MouseClicked(evt);
+            }
+        });
 
         jButton1.setText("Afisare");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -152,9 +191,9 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(372, 372, 372)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 402, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addGap(28, 28, 28))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -209,9 +248,9 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(372, 372, 372)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 402, Short.MAX_VALUE)
                 .addComponent(jButton2)
-                .addGap(28, 28, 28))
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -284,6 +323,9 @@ public class MainFrame extends javax.swing.JFrame {
                     if(a1.getTipDet().equalsIgnoreCase(jTextField1.getText()) && a1.getBrand().equalsIgnoreCase(jTextField2.getText())){
                         lista.addElement(a1);
                         listaFiltAlarma.add(a1);
+                    }
+                    else{
+                        jFrame2.show(true);
                     }
                 }
         }
@@ -375,6 +417,28 @@ public class MainFrame extends javax.swing.JFrame {
         jFrame1.setVisible(false);
     }//GEN-LAST:event_jFileChooser1ActionPerformed
 
+    private void jOptionPane1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jOptionPane1MousePressed
+        // TODO add your handling code here:
+        jFrame2.setVisible(false);
+    }//GEN-LAST:event_jOptionPane1MousePressed
+
+    private void jTabbedPane1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MouseClicked
+        // TODO add your handling code here:
+        if(jTabbedPane1.getSelectedIndex() == 0){
+            lista.clear();
+            for(Gadgets g : listaAlarma){
+                lista.addElement(g);
+            }
+            jList1.setModel(lista);
+        }else if(jTabbedPane1.getSelectedIndex() == 1){
+            lista.clear();
+            for(Gadgets g : listaPriza){
+                lista.addElement(g);
+            }
+            jList1.setModel(lista);
+        }    
+    }//GEN-LAST:event_jTabbedPane1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -422,12 +486,14 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JFrame jFrame1;
+    private javax.swing.JFrame jFrame2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JList<Gadgets> jList1;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JOptionPane jOptionPane1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTabbedPane jTabbedPane1;
