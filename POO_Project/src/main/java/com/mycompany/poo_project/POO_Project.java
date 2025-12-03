@@ -54,7 +54,7 @@ public class POO_Project {
         
         ArrayList<Gadgets> listaBoxe_Portabile = new ArrayList<>();
         ArrayList<Gadgets> listaOchelari_VR = new ArrayList<>();
-   
+        java.awt.EventQueue.invokeLater(() -> new MainFrame(listaBoxe_Portabile,listaOchelari_VR).setVisible(true));
         for(int i = 0 ; i <10 ; i++)
         {
             Ochelari_VR vr1 = new Ochelari_VR("Quest 3", "Alb", "Meta",1999,true,"1920x1080p",90,120,"Titanium","Uifi");
